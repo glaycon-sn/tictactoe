@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from 'react';
+import { useState } from 'react';
 import handleVictory from '../assets/handleVictory';
 
 
@@ -21,14 +21,10 @@ function App() {
     const [actives, setActives] = useState([...Array(cells)])
 
 
-    const input1 = useRef(null)
-    const input2 = useRef(null)
-
     const handleCell = (id) => {
         let newArray = actives;
         newArray[id] = player;
         setActives(newArray);
-        console.log(actives)
         player === 'x' ? setPlayer('o') : setPlayer('x')
         handleVictory(actives, cells, PlayerVictory, player1, player2)
     }

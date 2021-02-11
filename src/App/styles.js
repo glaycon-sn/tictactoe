@@ -11,7 +11,8 @@ export const Container = styled.div`
 export const Header = styled.div`
     display:flex;
     justify-content: space-around;
-    width:30vmax;
+    width:30vw;
+    min-width:300px;
 `;
 
 export const Hr = styled.div`
@@ -19,7 +20,7 @@ export const Hr = styled.div`
     margin-top:4vh;
     margin-bottom:4vh;
     min-height:1px;
-    min-width:80vw;
+    min-width:45vw;
 `;
 
 export const NameContainer = styled.div`
@@ -51,6 +52,7 @@ export const Footer = styled.div`
 export const ButtonContainer = styled.div`
     display:flex;
     width:20vw;
+    min-width:200px;
     margin-bottom:${props=>props.margin ? '3vh' : ''};
     justify-content:space-around;
 `

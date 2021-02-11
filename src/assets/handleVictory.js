@@ -10,17 +10,17 @@ export default function handleVictory(data, cells, action, name1, name2) {
     )
 
     const compareArrays = (array2, array1) => {
-        return Array.isArray(array1) &&
+        return (Array.isArray(array1) &&
             Array.isArray(array2) &&
             array1.length === array2.length &&
-            array1.every((v, index) => v === array2[index]) ||
+            array1.every((v, index) => v === array2[index])) ||
             array2.every((v, index) => v === array1[index] - array1[0])
     }
 
     const compareArrays2 = (array2, array1) => {
-        return Array.isArray(array1) && Array.isArray(array2) &&
+        return (Array.isArray(array1) && Array.isArray(array2) &&
             array1.length >= array2.length &&
-            array2.every(element => array1.indexOf(element) > -1) ||
+            array2.every(element => array1.indexOf(element) > -1)) ||
             array2.every((v, index) => v === array1[index] - array1[0])
     }
 
